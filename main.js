@@ -1,4 +1,9 @@
 let chartNumbers = [];
+let chartOptions = {
+  width: '100px',
+  height: '100px',
+};
+const chartSpace = $('#chart');
 
 $(document).ready( () => {
 
@@ -20,12 +25,14 @@ $(document).ready( () => {
       if (chartNumbers.length > 0 ) {
         $('#graph-button').show();
       }
-      console.log(chartNumbers)
+      // console.log(chartNumbers)
     }
   })
 
-  $('#graph-button').on( 'click', Event => {
-
+  $('#graph-button').on( 'click', event => {
+    // console.log("update");
+    event.currentTarget.innerHTML ="Update";
+    drawBarChart( chartNumbers, chartOptions, chartSpace )
   })
 
 })
