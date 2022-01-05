@@ -2,10 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Hello World</title>
+    <title>Lighthouse Labs Stretch Project</title>
+    <link rel="stylesheet" href="main.css">
   </head>
+
   <body>
-    <h1>Hello World</h1>
-    <p>This is a web page.</p>
+    <nav>
+      <div class="logo"><img src="lighthouse-labs-logo.png"></div>
+      <div class="dividing-line"></div>
+      <div class="logo-title">Bar Chart Stretch Project</div>
+      <div class="nav-menu-item" id="left">Input</div>
+      <div class="dividing-line"></div>
+      <div class="nav-menu-item" id="right">Options</div>
+      <form class="input-form">
+        <div id="chart-values"></div>  
+        <div id="input-value">
+          <label for="number">Chart Value</label><br>
+          <input type="number" id="number" class="data">
+          <button type="button" id="add-data">Add</button>
+          <button type="button" id="graph-button">Graph</button></div></form>
+      <div class="dividing-line"></div>
+      <form class="options-form">
+        <div class="options-group" id="dimensions">
+          <label for="width">Width</label><br>
+          <input type="number" id="width" class="options"><br>
+          <input type="number" id="height" class="options"><br>
+          <label for="height">Height</label>
+        </div>
+        <div class="options-group" id="colors">
+          <label for="color-scheme">Bar Colors</label><br>
+          <input type="text" id="color-scheme" class="options"><br>
+          <input type="text" id="label-colors" class="options"><br>
+          <label for="label-colors">Label Colors</label>
+        </div>
+        <div class="options-group" id="axis-details">
+          <label for="y-axis-labels">Y Labels</label><br>
+          <input type="number" id="y-axis-labels" class="options"><br>
+          <input type="number" id="x-axis-labels" class="options"><br>
+          <label for="x-axis-labels">X Labels</label>
+        </div>
+        <div class="options-group" id="title-details">
+          <label for="chart-title">Chart Title</label><br>
+          <input type="number" id="chart-title" class="options"><br>
+          <input type="number" id="chart-title-size" class="options"><br>
+          <label for="chart-title-size">Title Size</label>
+        </div>
+        <div class="options-group" id="title-font">
+          <label for="chart-title-color">Title Color</label><br>
+          <input type="number" id="chart-title-color" class="options"><br>
+          <input type="number" id="chart-title-font" class="options"><br>
+          <label for="chart-title-font">Title Font</Title></label></div></form>      
+    </nav>
+
+    <main>
+      <div id="chart-space"></div>
+    </main>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
   </body>
+
 </html>

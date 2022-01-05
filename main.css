@@ -1,0 +1,104 @@
+nav {
+  color: darkblue;
+  overflow: hidden;
+  display: grid;
+  align-items:stretch;
+  grid-template-columns: 1fr 2px 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+.logo {
+  display: flex;
+  grid-column:1;
+  grid-row: 1;
+  align-items: end;
+  justify-content: end;
+  padding: 5px 10px;
+  background-color: lightblue;
+}
+
+.logo > img {
+  place-self: end end;
+  width:80%;
+  max-height: 100%;
+}
+
+.logo-title {
+  display: flex;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 4vw;
+  grid-column:3;
+  grid-row:1;
+  align-items:end;
+  justify-content: start;
+  padding: 5px 10px;
+  background-color:lightblue;
+}
+
+.nav-menu-item {
+  display:grid;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 3vw;
+  color:lightblue;
+  background-color: darkblue;
+  padding:5px 10px;
+  align-content: center;
+}
+
+#left {
+  grid-column:1;
+  grid-row:2;
+  justify-content: end;
+}
+
+#right {
+  grid-column:3;
+  grid-row:2;
+  justify-content: start;
+}
+
+.dividing-line {
+  background-color: darkblue;
+  grid-column:2;
+}
+
+label {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  color:lightblue;
+}
+
+.input-form {
+  display: none;
+  align-items:start;
+  justify-content:space-between;
+  padding:5px;
+  background-color: darkblue;
+  grid-row:3;
+  grid-column:1;
+}
+#chart-values {
+  align-self: end;
+}
+#graph-button {
+  display: none;
+}
+
+.options-form {
+  display: none;
+  justify-content:space-between; 
+  background-color:darkblue;
+  padding:5px;
+  grid-row:3;
+  grid-column:3;
+}
+
+.showform {
+  display: flex;
+  flex-wrap:wrap;
+}
+
+#chart-values {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  color: lightblue;
+  padding:5px;
+}
