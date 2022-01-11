@@ -1,3 +1,10 @@
+body {
+  display:flex;
+  flex-direction:column;
+  justify-content:end;
+  height:100vh;
+}
+
 nav {
   color: darkblue;
   overflow: hidden;
@@ -5,6 +12,15 @@ nav {
   align-items:stretch;
   grid-template-columns: 1fr 2px 1fr;
   grid-template-rows: auto auto auto;
+  flex:0 1 auto;
+}
+
+main{
+  flex: 1 1 auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:auto;
 }
 
 .logo {
@@ -43,6 +59,7 @@ nav {
   background-color: darkblue;
   padding:5px 10px;
   align-content: center;
+  grid-template-columns:auto auto;
 }
 
 #left {
@@ -54,7 +71,8 @@ nav {
 #right {
   grid-column:3;
   grid-row:2;
-  justify-content: start;
+  justify-content: space-between;
+  align-items:center;
 }
 
 .dividing-line {
@@ -62,9 +80,14 @@ nav {
   grid-column:2;
 }
 
+#third-row-dl {
+  display: none;
+}
+
 label {
   font-family: 'Arial Narrow', Arial, sans-serif;
   color:lightblue;
+  padding: 5px 1px;
 }
 
 .input-form {
@@ -75,10 +98,14 @@ label {
   background-color: darkblue;
   grid-row:3;
   grid-column:1;
+  position:relative;
+  z-index:1;
 }
+
 #chart-values {
   align-self: end;
 }
+
 #graph-button {
   display: none;
 }
@@ -86,15 +113,73 @@ label {
 .options-form {
   display: none;
   justify-content:space-between; 
+  flex-wrap:wrap;
   background-color:darkblue;
   padding:5px;
   grid-row:3;
   grid-column:3;
 }
 
-.showform {
+input {
+  margin:1px;
+}
+
+.options-label {
+  padding-left: 3px;
+}
+
+.options-group {
+  padding: 5px;
+}
+
+.color-options {
+  width: 60px;
+  height: 25px;
+}
+
+.dim-options {
+  width: 42px;
+  height: 19px;
+}
+
+.appearance-options {
+  width: 50px;
+  height: 25px;
+}
+
+.legend-options {
   display: flex;
-  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.options-label {
+  width: 60px;
+}
+
+.legend-inputs {
+  flex-grow:1;
+}
+
+#legend {
+  float: right;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-content:stretch;
+}
+
+#units {
+  width:50px;
+  height:25px;
+}
+
+.showform {
+  display: flex !important;
+}
+
+.onTop {
+  z-index:10;
 }
 
 #chart-values {

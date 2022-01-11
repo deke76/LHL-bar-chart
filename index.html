@@ -13,57 +13,56 @@
       <div class="logo-title">Bar Chart Stretch Project</div>
       <div class="nav-menu-item" id="left">Input</div>
       <div class="dividing-line"></div>
-      <div class="nav-menu-item" id="right">Options</div>
+      <div class="nav-menu-item" id="right"><div>Options</div><div><button type="button" id="graph-button">Graph</button></div></div>
       <form class="input-form">
         <div id="chart-values"></div>  
         <div id="input-value">
           <label for="number">Chart Value</label><br>
-          <input type="number" id="number" class="data">
+          <input type="number" id="number" class="data" value="100">
           <button type="button" id="add-data">Add</button>
-          <button type="button" id="graph-button">Graph</button></div></form>
-      <div class="dividing-line"></div>
+          </div></form>
+      <div class="dividing-line" id="third-row-dl"></div>
       <form class="options-form">
         <div class="options-group" id="dimensions">
-          <label for="width">Width</label><br>
-          <input type="number" id="width" class="options"><br>
-          <input type="number" id="height" class="options"><br>
-          <label for="height">Height</label>
+          <label for="dimensions">Chart Dimensions</label><br>
+          <input type="number" id="width" class="dim-options" value="8"><label for="width" class="options-label">Width</label><br>
+          <input type="number" id="height" class="dim-options" value="5"><label for="height" class="options-label">Height</label><br>
+          <input type="number" id="y-scale" class="dim-options" value="1"><label for="y-scale" class="options-label">Scale</label><br>
+          <select name="units" id="units" class="dim-options">
+            <option value="inches" selected="selected">in</option>
+            <option value="millimeters">mm</option>
+            <option value="centimeters">cm</option></select><label for="units" class="options-label">Units</label>
         </div>
         <div class="options-group" id="colors">
-          <label for="color-scheme">Bar Colors</label><br>
-          <input type="text" id="color-scheme" class="options"><br>
-          <input type="text" id="label-colors" class="options"><br>
-          <label for="label-colors">Label Colors</label>
+          <label for="color-scheme">Chart Colors</label><br>
+          <input type="color" id="bar-colors" class="color-options" value="#000000"><label for="color-scheme" class="options-label">Bar</label><br>
+          <input type="color" id="label-colors" class="color-options" value="#000000"><label for="label-colors" class="options-label">Label</label><br>
+          <input type="color" id="title-colors" class="color-options" value="#000000"><label for="chart-title-color" class="options-label">Title</label><br>
         </div>
-        <div class="options-group" id="axis-details">
-          <label for="y-axis-labels">Y Labels</label><br>
-          <input type="number" id="y-axis-labels" class="options"><br>
-          <input type="number" id="x-axis-labels" class="options"><br>
-          <label for="x-axis-labels">X Labels</label>
+        <div class="options-group" id="font-details">
+          <label for="appearance-details">Appearance (px)</label><br>
+          <input type="number" id="chart-title-size" class="appearance-options" value="20"><label for="title-font-size" class="options-label">Title Size</label><br>
+          <input type="text" id="chart-title-font" class="appearance-options" value="arial"><label for="title-font" class="options-label">Title Font</label><br>
+          <input type="text" id="axis-title-font" class="appearance-options" value="arial"><label for="axis-title-font" class="options-label">Axis Font</label><br>
+          <input type="number" id="bar-spacing" class="appearance-options" value="0"><label for="bar-spacing" class="options-label">Bar Spacing</label>
         </div>
-        <div class="options-group" id="title-details">
-          <label for="chart-title">Chart Title</label><br>
-          <input type="number" id="chart-title" class="options"><br>
-          <input type="number" id="chart-title-size" class="options"><br>
-          <label for="chart-title-size">Title Size</label>
+        <div class="options-group" id="legend">
+          <label for="legend">Legend</label>
+          <div  class="legend-options"><input type="text" id="chart-title" class="legend-inputs" value="Bar Chart"><label for="x-axis-labels" class="options-label">Title</label></div>
+          <div class="legend-options"><input type="text" id="x-axis-labels" class="legend-inputs" value="X Axis"><label for="x-axis-labels" class="options-label">X Axis</label></div>
+          <div class="legend-options"><input type="text" id="y-axis-labels" class="legend-inputs" value="Y Axis"><label for="y-axis-labels" class="options-label">Y Axis</label></div>
         </div>
-        <div class="options-group" id="title-font">
-          <label for="chart-title-color">Title Color</label><br>
-          <input type="number" id="chart-title-color" class="options"><br>
-          <input type="number" id="chart-title-font" class="options"><br>
-          <label for="chart-title-font">Title Font</Title></label></div></form>      
+        
     </nav>  
 
     <main>
-      <div id="chart-space">
-        <div id="chart"></div>
-      </div>
+      <div id="chart-space"></div>
     </main>
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="main.js"></script>
-  <script src="barChart.js"></script>
+  <script src="bar-charting.js"></script>
   </body>
 
 </html>
